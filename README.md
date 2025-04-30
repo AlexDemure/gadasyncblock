@@ -29,9 +29,9 @@ detector = AsyncBlock(timeout=1)
 
 @contextlib.asynccontextmanager
 async def lifespan(_: FastAPI):
-    await detector.start()
+    detector.start()
     yield
-    await detector.shutdown()
+    detector.shutdown()
 
 
 app = FastAPI(lifespan=lifespan)
