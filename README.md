@@ -24,6 +24,7 @@ import contextlib
 from fastapi import FastAPI
 
 from gadasyncblock import AsyncBlock
+# logger: asyncio.detector
 
 detector = AsyncBlock(timeout=1)
 

@@ -2,7 +2,9 @@ import asyncio
 import signal
 import traceback
 import types
+import logging
 
+logger = logging.getLogger("asyncio.detector")
 
 class AsyncBlock:
     def __init__(self, timeout: int = 30):
